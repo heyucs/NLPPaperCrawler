@@ -199,5 +199,6 @@ if __name__ == '__main__':
 		print u'过滤完成 ' + str(len(urlList)) + ' -> ' + str(len(new_urlList))
 		downloadPaper(downurl,new_urlList,dic,loc)
 		print u'下载完成' + str(no) + u'个会议任务'
+		no +=1
 	print 'Done!^_^'
 
