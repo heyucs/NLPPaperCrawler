@@ -1,3 +1,10 @@
+﻿'''
+名称 :"NLP论文爬虫"
+版本 :1.0
+作者 :heyu
+Email:heyucs@yahoo.com
+'''
+
 #coding=utf-8
 import urllib 
 import urllib2
