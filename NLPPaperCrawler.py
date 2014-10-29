@@ -4,7 +4,6 @@
 作者 :heyu
 Email:heyucs@yahoo.com
 '''
-
 #coding=utf-8
 import urllib 
 import urllib2
@@ -13,6 +12,10 @@ import thread
 import os
 import time
 import codecs
+import sys
+reload(sys) 
+sys.setdefaultencoding( "utf-8" )
+
 
 def filenameFilter(filename):
         result, number = re.subn(r'[\/:*?"><|’]', '', filename)
