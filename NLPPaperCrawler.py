@@ -18,8 +18,6 @@ def filenameFilter(filename):
         result, number = re.subn(r'[\/:*?"><|’]', '', filename)
         return result
                                  
-
-
 def downPaper(url, filename):
 	urllib.urlretrieve(url, filename)
 	f = urllib2.urlopen(url) 
@@ -121,7 +119,7 @@ def showOneConf(pattern,html,regex,locMap):
 	no = len(locMap)+1
 	for i in range(len(List)):
 		print '['+ str(no) +']:' + getConfTime(List[i]),
-		if no == 72:
+		if List[i].endswith('/') == False :
 			locMap[no] = getConfLoc(List[i])+'/'
 		else:
 			locMap[no] = getConfLoc(List[i])
