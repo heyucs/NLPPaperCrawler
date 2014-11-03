@@ -123,7 +123,7 @@ def showOneConf(pattern,html,regex,locMap):
 	for i in range(len(List)):
 		print '['+ str(no) +']:' + getConfTime(List[i]),
 		if getConfLoc(List[i]).endswith('/') == False :
-			print List[i]
+#			print List[i]
 			locMap[no] = getConfLoc(List[i])+'/'
 		else:
 			locMap[no] = getConfLoc(List[i])
