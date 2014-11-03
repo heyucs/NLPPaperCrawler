@@ -84,14 +84,17 @@ def filterUrl(urlList, keywordDic):
 
 def downloadPaper(rooturl,urlList,dic,loc):
 	no = 0
+	u=urllib2.urlopen(rooturl)
+	newRooturl=u.geturl()
+	newRooturl, number = re.subn(r'/#[0-9]*[/]', '/', newRooturl)
 	for url in urlList:
 		filename  = getFileName(url)  
 		authors   = getAuthor(url) 
 		papername = getPaperName(url)
 		firstauthor = authors.split(';')[0]
-#		print rooturl+filename
+		print newRooturl+filename
 		papername = filenameFilter(papername)
-		downPaper(rooturl+filename,dic+loc[2:5]+'_'+firstauthor+'_'+papername+'.pdf')
+		downPaper(newRooturl+filename,dic+loc[2:5]+'_'+firstauthor+'_'+papername+'.pdf')
 		no += 1
 		print str(no)+u' Downloading the paper：' + papername
 
